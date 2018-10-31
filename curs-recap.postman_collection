@@ -1,0 +1,157 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Curs Recap",
+		"_postman_id": "06a93261-ff77-1538-fb95-a0be600053c3",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login Request",
+			"request": {
+				"url": "http://localhost:3000/api/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"admin\",\n\t\"password\": \"admin\"\n}"
+				},
+				"description": "Login Request"
+			},
+			"response": []
+		},
+		{
+			"name": "Persons List",
+			"request": {
+				"url": "http://localhost:3000/api/contacts",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NDA5ODMzMjEsInVzZXJuYW1lIjoiYWRtaW4iLCJpYXQiOjE1NDA5Nzk3MjF9.CswBf-QvycXrrpimOzcbqHHfoUe3e56GF0lX55O7v2w",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"admin\",\n\t\"password\": \"admin\"\n}"
+				},
+				"description": "Persons List"
+			},
+			"response": []
+		},
+		{
+			"name": "Persons Create",
+			"request": {
+				"url": "http://localhost:3000/api/contacts",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NDA5NDQxMDIsInVzZXJuYW1lIjoiYWRtaW4iLCJpYXQiOjE1NDA5NDA1MDJ9.KkkFM8MQ2J60pLMWR9oNLI8rsMbyeo2xomC1_j6Ahyc",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstName\": \"admina\",\n\t\"lastName\": \"sdsdsdfsdfsddfssdfsdfsddsfdsfsdffdfsdffdsdsds\",\n\t\"phoneNumber\": \"0733333333\"\n}"
+				},
+				"description": "Persons Create"
+			},
+			"response": []
+		},
+		{
+			"name": "Persons Update Single",
+			"request": {
+				"url": "http://localhost:3000/api/contacts/5bd8d4b5489b18810390284f",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NDA5NDQxMDIsInVzZXJuYW1lIjoiYWRtaW4iLCJpYXQiOjE1NDA5NDA1MDJ9.KkkFM8MQ2J60pLMWR9oNLI8rsMbyeo2xomC1_j6Ahyc",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstName\": \"afafsfsdfsdfsdfsdfsdfsdfsdfsdfsdfdsf\",\n\t\"lastName\": \"admin\",\n\t\"phoneNumber\": \"0733333333\"\n}"
+				},
+				"description": "Persons Create"
+			},
+			"response": []
+		},
+		{
+			"name": "Persons Update Batch",
+			"request": {
+				"url": "http://localhost:3000/api/contacts",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NDA5NDk3ODIsInVzZXJuYW1lIjoiYWRtaW4iLCJpYXQiOjE1NDA5NDYxODJ9.6dalMpR1_0KGHehZhS-FwW2b0Z5W6maHN_qfBWMcMnA",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\n\t\"_id\": \"5bd8d4b5489b18810390284f\",\n\t\"firstName\": \"batchUpsdsdsddate2aaasdsadaadfddfdsfdfdfdfa\",\n\t\"lastName\": \"batchUpdatsdfsdfsdffdfdfsfsdfe2\",\n\t\"phoneNumber\": \"batchUpdasdfdsfsdfdsfdsfdsfte2\"\n},\n{\n\t\"_id\": \"5bd8e2f9a1cb0xzccxcdscdsc502c7acb97csfsdfsdfdsf\",\n\t\"firstName\": \"basdsadddd\",\n\t\"lastName\": \"batchUpdatcsddsfe1\",\n\t\"phoneNumber\" : \"batchUpdate1\"\n}]"
+				},
+				"description": "Persons Create"
+			},
+			"response": []
+		},
+		{
+			"name": "Persons Delete",
+			"request": {
+				"url": "http://localhost:3000/api/contacts/5bd8d4b5489b18810390284fsdfdsfdsf",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NDA5NDk3ODIsInVzZXJuYW1lIjoiYWRtaW4iLCJpYXQiOjE1NDA5NDYxODJ9.6dalMpR1_0KGHehZhS-FwW2b0Z5W6maHN_qfBWMcMnA",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "Persons Create"
+			},
+			"response": []
+		}
+	]
+}
